@@ -1,0 +1,37 @@
+class Solution {
+    public int minSubArrayLen(int target, int[] nums) {
+
+        int minLenWindow = Integer.MAX_VALUE;
+        int currentSum = 0;
+
+        // Two pointers
+        int low = 0;
+        int high = 0;
+
+        while (high < nums.length) {
+
+            // Add current element to the window
+            currentSum += nums[high];
+            high++;
+
+            // Try to reduce the window size
+            while (currentSum >= target) {
+
+                int currentWindowSize = high - low;
+
+                // Update minimum window length
+                minLenWindow = Math.min(
+                    minLenWindow,
+                    currentWindowSize
+                );
+
+                // Remove the left element
+                currentSum -= nums[low];
+                low++;
+            }
+        }
+
+        // If no valid subarray exists, return 0
+        return minLenWindow == Integer.MAX_VALUE ? 0 : minLenWindow;
+    }
+}

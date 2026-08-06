@@ -1,0 +1,26 @@
+class BasicMaths
+{
+    static int gcd(int a,int b){
+        while(b!=0)
+            {
+            int temp=b;
+            b=a%b;
+            a=temp;
+        }
+        return a;
+    
+    }
+    static int LCM(int a,int b){
+        int gcd1=gcd(a,b);
+        int prod=a*b;
+        int lcm=prod/gcd1;
+        return lcm;
+
+    }
+    public static void main(String args[]){
+        int a=6;
+        int b=2;
+        int result=LCM(a,b);
+        System.out.println(result);
+    }
+}

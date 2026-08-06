@@ -1,0 +1,25 @@
+public class BasicMaths
+{
+    static boolean isPrime(int num)
+    {
+     for(int i=2;i<num-1;i++){
+        if(num%i==0){
+            return false;
+        }
+     }
+     return true; 
+    }
+    static void printAllPrime(int n){
+        for(int num=2;num<=n;num++){
+            if(isPrime(num)){
+                System.out.println(num+" ");
+            }
+        }
+
+    }
+    public static void main(String args[]){
+        int num=100;
+        printAllPrime(num);
+        
+    }
+}

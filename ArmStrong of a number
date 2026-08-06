@@ -1,0 +1,23 @@
+class BasicMaths{
+    static boolean isArmstrong(int num){
+        int OG=num;
+        int sum=0;
+        while(num!=0){
+            int digit=num%10;
+            sum=sum+(digit*digit*digit);
+            num=num/10;
+        }
+        if(OG==sum){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public static void main(String args[]){
+        int num=153;
+        boolean result=isArmstrong(num);
+        System.out.println(result);
+    }
+}
+

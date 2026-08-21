@@ -1,0 +1,17 @@
+class ArrayBasicProblem {
+    static int[] multiplyBy10(int[] arr){
+        int size = arr.length;
+        int[] newArr = new int[size];
+        for(int i=0;i<size;i++)
+        {
+            int element = arr[i];
+            int newelement= element*10;
+            newArr[i] = newelement;
+        }
+        return newArr;
+    }
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        System.out.println(java.util.Arrays.toString(multiplyBy10(arr)));
+    }
+}

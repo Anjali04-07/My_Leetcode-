@@ -1,0 +1,17 @@
+class ArrayBasicProblem {
+
+
+    static int getMaximumNumber(int[] arr){
+        int max= arr[0];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+    public static void main (String args[]){
+        int arr[] = {1,2,3,55,6,7,89};
+        System.out.println(getMaximumNumber(arr));
+    }
+    }

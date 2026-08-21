@@ -1,0 +1,26 @@
+import java.util.Arrays;
+
+class ArrayBasicProblem {
+
+       static int[] getZeroAndOneCount(int arr[]){
+        int zcount=0;
+        int ocount=0;
+
+        for(int i=0;i<arr.length;i++){
+            if(arr[i] ==0){
+                zcount++;
+            }
+            else{
+                ocount++;
+            }
+        }
+        int[] ans={zcount , ocount};
+        return ans;
+       }
+       public static void main(String[] args){
+        int arr[] ={0,1,1,0,0,0,1,1,1,1,0};
+        int ans[]=getZeroAndOneCount(arr);
+        System.out.println("Zeroes: "+ ans[0]);
+        System.out.println("Ones: "+ans[1]);
+       }
+}

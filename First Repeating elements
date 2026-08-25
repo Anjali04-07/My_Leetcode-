@@ -1,0 +1,15 @@
+class Solution {
+    public int firstUniqueFreq(int[] nums) {
+        HashMap<Integer,Integer> frq = new HashMap<>();
+        for(int num:nums){
+            frq.put(num,frq.getOrDefault(num,0)+1);
+        }
+        for(int i:nums){
+            if(frq.get(i)>1){
+                return i;
+            }
+        }
+        return -1;
+        
+    }
+}

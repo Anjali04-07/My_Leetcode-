@@ -1,0 +1,49 @@
+class Solution {
+
+    public Node flatten(Node head) {
+        if (head == null) {
+            return head;
+        }
+
+        flattenList(head);
+        return head;
+    }
+
+    private Node flattenList(Node head) {
+
+        Node current = head;
+        Node last = null;
+
+        while (current != null) {
+
+            Node next = current.next;
+
+            if (current.child != null) {
+
+                Node child = current.child;
+
+                Node childLast = flattenList(child);
+
+                current.next = child;
+                child.prev = current;
+
+                childLast.next = next;
+
+                if (next != null) {
+                    next.prev = childLast;
+                }
+
+                current.child = null;
+
+                last = childLast;
+
+            } else {
+                last = current;
+            }
+
+            current = next;
+        }
+
+        return last;
+    }
+}

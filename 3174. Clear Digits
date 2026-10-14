@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Solution {
+    public String clearDigits(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char ch : s.toCharArray()) {
+            if (Character.isDigit(ch)) {
+                if (!stack.isEmpty()) {
+                    stack.pop();   // remove closest left non-digit character
+                }
+            } else {
+                stack.push(ch);   // push letters
+            }
+        }
+
+        // Build result string
+        StringBuilder result = new StringBuilder();
+        for (char ch : stack) {
+            result.append(ch);
+        }
+
+        return result.toString();
+    }
+}

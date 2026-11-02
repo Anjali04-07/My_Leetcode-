@@ -1,0 +1,188 @@
+import java.util.*;
+
+// public class BasicMathsNew{
+//     //1.Fintd the prime number or not
+
+//     // public static void IsPrime(int n){
+//     //     for(int i=2; i*i<=n; i++){
+//     //         if(n % i ==0){
+//     //             System.out.println("Not Prime");
+//     //             return;
+//     //         }
+//     //     }
+//     //     System.out.println("Prime");
+//     // }
+//     // public static void main(String argas[]){
+//     //     int n=7;
+//     //     IsPrime(n);
+//     // }
+
+//     //2. Print the Digits of a number
+
+//     // public static void printDigits(int num){
+//     //     while(num!=0){
+//     //         int digit= num%10;
+//     //         System.out.println(digit);
+//     //         num=num/10;
+//     //     }
+//     // }
+//     // public static void main(String args[]){
+//     //     int num=87569;
+//     //     printDigits(num);
+//     // }
+
+//     //3. Count the digits present in the number
+// //     public static int countDigit(int num){
+// //         int count=0;
+// //         while(num!=0){
+// //             int digit= num%10;
+// //             count++;
+// //             num=num/10;
+// //         }
+// //         return count;
+// //     }
+// //    public static void main(String args[]){
+// //     int num=965489;
+// //     int ans=countDigit(num);
+// //     System.out.println(ans);
+// //    }
+
+//     // 4.Sum of Digits of a number
+// //     public static int SumDigit(int num){
+// //         int Sum=0;
+// //         while(num!=0){
+// //             int digit= num%10;
+// //             Sum+=digit;
+// //             num=num/10;
+// //         }
+// //         return Sum;
+// //     }
+// //    public static void main(String args[]){
+// //     int num=965489;
+// //     int ans=SumDigit(num);
+// //     System.out.println(ans);
+// //    }
+
+//       //5.Reverse digits of Nmuber 
+//     //   public static int revNum(int num){
+//     //     int ans=0;
+//     //     while(num != 0 ){
+//     //         int digit=num%10;
+//     //         ans=ans*10+digit;
+//     //         num=num/10;
+//     //     }
+//     //     return ans;
+//     //   }
+//     //   public static void main(String argas[]){
+//     //     int num=54678;
+//     //     int ans=revNum(num);
+//     //     System.out.println(ans);
+//     //   }
+
+//     //6.Find the number is Palindrom or not
+//     //  public static int revNum(int num){
+//     //     int ans=0;
+//     //     while(num != 0 ){
+//     //         int digit=num%10;
+//     //         ans=ans*10+digit;
+//     //         num=num/10;
+//     //     }
+//     //     return ans;
+//     //   }
+//     // public static boolean IsPalindrom(int num){
+//     //     int originalNum=num;
+//     //     int reverseNum= revNum(num);
+//     //     if(originalNum == reverseNum){
+//     //         return true;
+//     //     }
+//     //     else{
+//     //         return false;
+//     //     }
+//     // }
+//     // public static void main(String args[]){
+//     //     int num=1221;
+//     //     boolean ans=IsPalindrom(num);
+//     //     System.out.println(ans);
+//     // }
+
+//     //7.Find the GCD 
+//     // public static int getGCD(int a,int b){
+//     //     while(b!=0){
+//     //         int temp=b;
+//     //         b=a%b;
+//     //         a=temp;
+//     //     }
+//     //     int ans=a;
+//     //     return ans;
+//     // }
+//     // public static void main(String args[]){
+//     //     System.out.println(getGCD(35,7));
+//     // }
+
+//     //8.Find the LCM
+//     // public static int getGCD(int a,int b){
+//     //     while(b!=0){
+//     //         int temp=b;
+//     //         b=a%b;
+//     //         a=temp;
+//     //     }
+//     //     int ans=a;
+//     //     return ans;
+//     // }
+//     // public static int getLCM(int a, int b){
+//     //     int gcd=getGCD(a,b);
+//     //     int pro=a*b;
+//     //     int lcm=pro/gcd;
+//     //     return lcm;
+//     // }
+//     // public static void main(String args[]){
+//     //     System.out.println(getLCM(35,7));
+//     // }
+
+//     //9.Is Anstrong Number or not;
+//     // public static int isAnstrong(int num){
+//     //     int og=num;
+//     //     int sum=0;
+//     //     while(num!=0){
+//     //         int digit=num%10;
+//     //         int cube=digit*digit*digit;
+//     //         sum=sum+cube;
+//     //         num=num/10;
+//     //     }
+//     //     if(sum ==og){
+//     //         return 1;
+//     //     }
+//     //     else{
+//     //         return 0;
+//     //     }
+//     // }
+//     // public static void main(String args[]){
+
+//     //     int num=150;
+//     //     int ans=isAnstrong(num);
+//     //     System.out.println(ans);
+//     // }
+
+//     //10.Find the perfect number
+//     public static int isPerfect(int num){
+//         int sum=1;
+//         for(int i=2;i*i<num;i++){
+//             if(num%i==0){
+//                 int fact1=i;
+//                 int fact2=num/i;
+//                 sum+=fact1+fact2;
+//             }
+//         } 
+//             if(sum==num){
+//                 return 1;
+//             }
+//             else{
+//                 return 0;
+//             }
+//     }
+//      public static void main(String args[]){
+//             int num=28;
+//             int ans=isPerfect(num);
+//             System.out.println(ans);
+//         }
+// }
